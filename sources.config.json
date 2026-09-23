@@ -1,0 +1,30 @@
+{
+  "gnews": {
+    "query": "\"private equity\" OR buyout OR LBO",
+    "lang": "en",
+    "max": 25
+  },
+  "rssFeeds": [
+    { "name": "Yahoo Finance", "url": "https://finance.yahoo.com/news/rssindex" },
+    { "name": "PE Hub", "url": "https://www.pehub.com/feed/" },
+    { "name": "Private Equity Wire", "url": "https://www.privateequitywire.co.uk/feed/" }
+  ],
+  "keywordFilters": [
+    "private equity",
+    "buyout",
+    "acquisition",
+    "leveraged buyout",
+    "\\bLBO\\b",
+    "\\bM&A\\b",
+    "portfolio company",
+    "venture capital"
+  ],
+  "tagKeywords": [
+    "Buyout",
+    "Venture",
+    "M&A",
+    "IPO",
+    "Acquisition",
+    "Fundraising"
+  ]
+}
