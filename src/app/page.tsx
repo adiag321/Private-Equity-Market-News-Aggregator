@@ -3,8 +3,8 @@ import { NewsFeed } from "@/components/NewsFeed";
 
 export const dynamic = "force-dynamic";
 
-export default function Home() {
-  const articles = getArticles();
+export default async function Home() {
+  const articles = await getArticles();
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black">
