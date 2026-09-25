@@ -46,7 +46,7 @@ export function NewsFeed({ articles }: { articles: Article[] }) {
   }, [articles, activeTab, activeSector, activeFirm, query]);
 
   return (
-    <div className="mx-auto flex w-full max-w-2xl flex-col">
+    <div className="flex w-full flex-col">
       <nav className="sticky top-0 z-10 flex border-b border-zinc-200 bg-white/90 backdrop-blur dark:border-zinc-800 dark:bg-black/90">
         {TIME_TABS.map((tab) => (
           <button
