@@ -2,7 +2,11 @@ name: Fetch PE News
 
 on:
   schedule:
-    - cron: "0 10,15,21 * * *"
+    # Target: 10:00 / 15:00 / 21:00 Pacific Time. GitHub Actions cron is UTC-only
+    # and doesn't observe DST, so we approximate it with two seasonal schedules
+    # (off by ~1 hour only during the week of the actual DST switchover).
+    - cron: "0 17,22,4 * 3-10 *" # PDT (UTC-7): roughly mid-March to early November
+    - cron: "0 18,23,5 * 11,12,1,2 *" # PST (UTC-8): roughly early November to mid-March
   workflow_dispatch:
 
 jobs:
