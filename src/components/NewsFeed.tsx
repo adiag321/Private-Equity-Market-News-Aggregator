@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import type { Article } from "@/types/article";
 import { RelativeTime } from "./RelativeTime";
 import { useReadArticles } from "@/lib/useReadArticles";
@@ -23,6 +23,38 @@ const ALL_SECTORS = "All";
 
 function articleMarket(article: Article): Market {
   return article.category ?? "Private Equity";
+}
+
+function Chip({
+  active,
+  onClick,
+  children,
+}: {
+  active: boolean;
+  onClick: () => void;
+  children: ReactNode;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`rounded-full border px-3.5 py-1.5 text-sm font-medium transition-colors ${
+        active
+          ? "border-foreground bg-foreground text-background"
+          : "border-zinc-300 text-zinc-500 hover:border-zinc-400 hover:text-foreground dark:border-zinc-700 dark:text-zinc-400 dark:hover:border-zinc-500"
+      }`}
+    >
+      {children}
+    </button>
+  );
+}
+
+function Eyebrow({ children }: { children: ReactNode }) {
+  return (
+    <p className="mb-2 flex items-center gap-1.5 font-mono text-[11px] font-medium uppercase tracking-widest text-accent">
+      <span aria-hidden>→</span>
+      {children}
+    </p>
+  );
 }
 
 export function NewsFeed({ articles }: { articles: Article[] }) {
@@ -64,69 +96,64 @@ export function NewsFeed({ articles }: { articles: Article[] }) {
 
   return (
     <div className="flex w-full flex-col">
-      <div className="border-b border-zinc-200 px-6 pt-4 pb-4 sm:px-10 lg:px-16 dark:border-zinc-800">
-        <div className="inline-flex rounded-lg bg-zinc-100 p-1 dark:bg-zinc-900">
+      <div className="border-b border-zinc-200 px-6 pt-6 pb-6 sm:px-10 lg:px-16 dark:border-zinc-800">
+        <Eyebrow>Market</Eyebrow>
+        <div className="flex flex-wrap gap-2">
           {MARKETS.map((market) => (
-            <button
+            <Chip
               key={market}
+              active={activeMarket === market}
               onClick={() => {
                 setActiveMarket(market);
                 setActiveSector(ALL_SECTORS);
                 setActiveFirm("");
               }}
-              className={`rounded-md px-4 py-1.5 text-sm font-semibold transition-colors ${
-                activeMarket === market
-                  ? "bg-white text-zinc-900 shadow-sm dark:bg-zinc-700 dark:text-zinc-50"
-                  : "text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
-              }`}
             >
               {MARKET_LABELS[market]}
-            </button>
+            </Chip>
           ))}
         </div>
       </div>
 
-      <nav className="sticky top-0 z-10 border-b border-zinc-200 bg-white/90 px-6 py-3 backdrop-blur sm:px-10 lg:px-16 dark:border-zinc-800 dark:bg-black/90">
-        <div className="inline-flex rounded-lg bg-zinc-100 p-1 dark:bg-zinc-900">
+      <nav className="sticky top-[72px] z-10 border-b border-zinc-200 bg-background/90 px-6 py-4 backdrop-blur sm:px-10 lg:px-16 dark:border-zinc-800">
+        <Eyebrow>Timeframe</Eyebrow>
+        <div className="flex flex-wrap gap-2">
           {TIME_TABS.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-                activeTab === tab.id
-                  ? "bg-white text-zinc-900 shadow-sm dark:bg-zinc-700 dark:text-zinc-50"
-                  : "text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
-              }`}
-            >
+            <Chip key={tab.id} active={activeTab === tab.id} onClick={() => setActiveTab(tab.id)}>
               {tab.label}
-            </button>
+            </Chip>
           ))}
         </div>
       </nav>
 
-      <div className="flex flex-col gap-3 border-b border-zinc-200 px-6 sm:px-10 lg:px-16 py-3 dark:border-zinc-800">
-        <input
-          type="search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search headlines and summaries…"
-          className="w-full rounded-md border border-zinc-300 bg-white px-3 py-1.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-zinc-500 focus:outline-none dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50"
-        />
+      <div className="flex flex-col gap-4 border-b border-zinc-200 px-6 py-5 sm:px-10 lg:px-16 dark:border-zinc-800">
+        <div className="relative">
+          <svg
+            className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400"
+            viewBox="0 0 20 20"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            aria-hidden
+          >
+            <circle cx="9" cy="9" r="6" />
+            <path d="M14 14L18 18" strokeLinecap="round" />
+          </svg>
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search headlines and summaries…"
+            className="w-full rounded-full border border-zinc-300 bg-background py-2 pl-10 pr-4 text-sm text-foreground placeholder:text-zinc-400 focus:border-accent focus:outline-none dark:border-zinc-700"
+          />
+        </div>
 
         {sectors.length > 1 && (
           <div className="flex flex-wrap gap-1.5">
             {sectors.map((sector) => (
-              <button
-                key={sector}
-                onClick={() => setActiveSector(sector)}
-                className={`rounded-full px-2.5 py-1 text-xs font-medium ${
-                  activeSector === sector
-                    ? "bg-zinc-900 text-white dark:bg-zinc-50 dark:text-zinc-900"
-                    : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
-                }`}
-              >
+              <Chip key={sector} active={activeSector === sector} onClick={() => setActiveSector(sector)}>
                 {sector}
-              </button>
+              </Chip>
             ))}
           </div>
         )}
@@ -135,7 +162,7 @@ export function NewsFeed({ articles }: { articles: Article[] }) {
           <select
             value={activeFirm}
             onChange={(e) => setActiveFirm(e.target.value)}
-            className="w-full rounded-md border border-zinc-300 bg-white px-2 py-1.5 text-sm text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50"
+            className="w-full rounded-full border border-zinc-300 bg-background px-4 py-2 text-sm text-foreground focus:border-accent focus:outline-none dark:border-zinc-700"
           >
             <option value="">All firms</option>
             {firms.map((firm) => (
@@ -148,7 +175,7 @@ export function NewsFeed({ articles }: { articles: Article[] }) {
       </div>
 
       {filtered.length === 0 ? (
-        <p className="px-6 sm:px-10 lg:px-16 py-16 text-center text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="px-6 py-16 text-center text-sm text-zinc-500 sm:px-10 lg:px-16 dark:text-zinc-400">
           No news published in this timeframe.
         </p>
       ) : (
@@ -156,15 +183,15 @@ export function NewsFeed({ articles }: { articles: Article[] }) {
           {filtered.map((article) => {
             const isRead = readIds.has(article.id);
             return (
-              <li key={article.id} className={`px-6 sm:px-10 lg:px-16 py-4 ${isRead ? "opacity-50" : ""}`}>
-                <div className="mb-1 flex flex-wrap items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400">
+              <li key={article.id} className={`px-6 py-5 sm:px-10 lg:px-16 ${isRead ? "opacity-50" : ""}`}>
+                <div className="mb-2 flex flex-wrap items-center gap-2 font-mono text-[11px] uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
                   <span>{article.sourceName}</span>
-                  <span>•</span>
+                  <span className="text-accent">·</span>
                   <RelativeTime iso={article.publishedAt} />
                   {article.tags?.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-zinc-100 px-2 py-0.5 text-[11px] font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300"
+                      className="rounded-full border border-zinc-300 px-2 py-0.5 text-zinc-600 dark:border-zinc-700 dark:text-zinc-300"
                     >
                       {tag}
                     </span>
@@ -172,7 +199,7 @@ export function NewsFeed({ articles }: { articles: Article[] }) {
                   {article.firms?.map((firm) => (
                     <span
                       key={firm}
-                      className="rounded-full bg-blue-50 px-2 py-0.5 text-[11px] font-medium text-blue-700 dark:bg-blue-950 dark:text-blue-300"
+                      className="rounded-full border border-accent/40 px-2 py-0.5 text-accent"
                     >
                       {firm}
                     </span>
@@ -183,11 +210,11 @@ export function NewsFeed({ articles }: { articles: Article[] }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => markAsRead(article.id)}
-                  className="block text-base font-semibold leading-snug text-zinc-900 hover:underline dark:text-zinc-50"
+                  className="block font-heading text-lg font-semibold leading-snug text-foreground hover:text-accent"
                 >
                   {article.title}
                 </a>
-                <p className="mt-1 line-clamp-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                <p className="mt-1.5 line-clamp-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
                   {article.summary}
                 </p>
               </li>
