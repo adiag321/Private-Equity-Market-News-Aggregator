@@ -20,7 +20,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "ArrowFund Market Pulse",
-  description: "Real-time intelligence on private equity and venture capital deals, updated three times a day.",
+  description: "Real-time intelligence on private equity and venture capital deals, updated hourly.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

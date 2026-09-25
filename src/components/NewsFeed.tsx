@@ -117,8 +117,8 @@ export function NewsFeed({ articles }: { articles: Article[] }) {
 
       <nav className="sticky top-[72px] z-10 border-b border-zinc-200 bg-background/90 px-6 py-4 backdrop-blur sm:px-10 lg:px-16 dark:border-zinc-800">
         <Eyebrow>Timeframe</Eyebrow>
-        <div className="flex flex-wrap items-center gap-2">
-          <div className="relative w-full sm:w-60">
+        <div className="flex flex-wrap items-center gap-4">
+          <div className="relative min-w-[200px] flex-1">
             <svg
               className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400"
               viewBox="0 0 20 20"
@@ -138,11 +138,13 @@ export function NewsFeed({ articles }: { articles: Article[] }) {
               className="w-full rounded-full border border-zinc-300 bg-background py-1.5 pl-10 pr-4 text-sm text-foreground placeholder:text-zinc-400 focus:border-accent focus:outline-none dark:border-zinc-700"
             />
           </div>
-          {TIME_TABS.map((tab) => (
-            <Chip key={tab.id} active={activeTab === tab.id} onClick={() => setActiveTab(tab.id)}>
-              {tab.label}
-            </Chip>
-          ))}
+          <div className="flex flex-wrap items-center justify-end gap-3 sm:ml-auto">
+            {TIME_TABS.map((tab) => (
+              <Chip key={tab.id} active={activeTab === tab.id} onClick={() => setActiveTab(tab.id)}>
+                {tab.label}
+              </Chip>
+            ))}
+          </div>
         </div>
       </nav>
 

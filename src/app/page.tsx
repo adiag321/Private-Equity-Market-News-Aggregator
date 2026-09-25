@@ -20,7 +20,7 @@ export default async function Home() {
           <div className="flex items-center gap-3">
             <span className="hidden items-center gap-1.5 rounded-full border border-zinc-300 px-3 py-1 font-mono text-[11px] uppercase tracking-wide text-zinc-500 sm:inline-flex dark:border-zinc-700 dark:text-zinc-400">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              Live · Updated 3x Daily
+              Live · Updated Hourly
             </span>
             <ThemeToggle />
           </div>
