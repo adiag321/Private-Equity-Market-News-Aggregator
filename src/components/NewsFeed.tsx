@@ -64,40 +64,44 @@ export function NewsFeed({ articles }: { articles: Article[] }) {
 
   return (
     <div className="flex w-full flex-col">
-      <div className="flex border-b border-zinc-200 px-6 pt-4 sm:px-10 lg:px-16 dark:border-zinc-800">
-        {MARKETS.map((market) => (
-          <button
-            key={market}
-            onClick={() => {
-              setActiveMarket(market);
-              setActiveSector(ALL_SECTORS);
-              setActiveFirm("");
-            }}
-            className={`mr-6 pb-3 text-lg font-bold transition-colors ${
-              activeMarket === market
-                ? "text-zinc-900 dark:text-zinc-50"
-                : "text-zinc-400 hover:text-zinc-600 dark:text-zinc-600 dark:hover:text-zinc-400"
-            }`}
-          >
-            {MARKET_LABELS[market]}
-          </button>
-        ))}
+      <div className="border-b border-zinc-200 px-6 pt-4 pb-4 sm:px-10 lg:px-16 dark:border-zinc-800">
+        <div className="inline-flex rounded-lg bg-zinc-100 p-1 dark:bg-zinc-900">
+          {MARKETS.map((market) => (
+            <button
+              key={market}
+              onClick={() => {
+                setActiveMarket(market);
+                setActiveSector(ALL_SECTORS);
+                setActiveFirm("");
+              }}
+              className={`rounded-md px-4 py-1.5 text-sm font-semibold transition-colors ${
+                activeMarket === market
+                  ? "bg-white text-zinc-900 shadow-sm dark:bg-zinc-700 dark:text-zinc-50"
+                  : "text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
+              }`}
+            >
+              {MARKET_LABELS[market]}
+            </button>
+          ))}
+        </div>
       </div>
 
-      <nav className="sticky top-0 z-10 flex border-b border-zinc-200 bg-white/90 backdrop-blur dark:border-zinc-800 dark:bg-black/90">
-        {TIME_TABS.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`flex-1 px-6 sm:px-10 lg:px-16 py-3 text-sm font-medium transition-colors ${
-              activeTab === tab.id
-                ? "border-b-2 border-zinc-900 text-zinc-900 dark:border-zinc-50 dark:text-zinc-50"
-                : "border-b-2 border-transparent text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
-            }`}
-          >
-            {tab.label}
-          </button>
-        ))}
+      <nav className="sticky top-0 z-10 border-b border-zinc-200 bg-white/90 px-6 py-3 backdrop-blur sm:px-10 lg:px-16 dark:border-zinc-800 dark:bg-black/90">
+        <div className="inline-flex rounded-lg bg-zinc-100 p-1 dark:bg-zinc-900">
+          {TIME_TABS.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+                activeTab === tab.id
+                  ? "bg-white text-zinc-900 shadow-sm dark:bg-zinc-700 dark:text-zinc-50"
+                  : "text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
       </nav>
 
       <div className="flex flex-col gap-3 border-b border-zinc-200 px-6 sm:px-10 lg:px-16 py-3 dark:border-zinc-800">

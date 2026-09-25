@@ -13,10 +13,10 @@ export default async function Home() {
         <div className="flex items-start justify-between px-6 py-6 sm:px-10 lg:px-16">
           <div>
             <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
-              PE News
+              ArrowFund Market Pulse
             </h1>
             <p className="text-sm text-zinc-500 dark:text-zinc-400">
-              Automated Private Equity market news aggregator
+              Real-time intelligence on private equity and venture capital deals
             </p>
           </div>
           <ThemeToggle />

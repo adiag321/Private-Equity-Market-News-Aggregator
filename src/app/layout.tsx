@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PE News — Private Equity Market News Aggregator",
-  description: "Automated Private Equity market news, updated three times a day.",
+  title: "ArrowFund Market Pulse",
+  description: "Real-time intelligence on private equity and venture capital deals, updated three times a day.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
