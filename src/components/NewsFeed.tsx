@@ -11,25 +11,42 @@ const TIME_TABS = [
   { id: "month", label: "Past Month", ms: 31 * 24 * 60 * 60 * 1000 },
 ] as const;
 
+const MARKETS = ["Private Equity", "Venture Capital"] as const;
+const MARKET_LABELS: Record<(typeof MARKETS)[number], string> = {
+  "Private Equity": "Private Equity Market",
+  "Venture Capital": "Venture Capital",
+};
+
 type TimeTabId = (typeof TIME_TABS)[number]["id"];
+type Market = (typeof MARKETS)[number];
 const ALL_SECTORS = "All";
 
+function articleMarket(article: Article): Market {
+  return article.category ?? "Private Equity";
+}
+
 export function NewsFeed({ articles }: { articles: Article[] }) {
+  const [activeMarket, setActiveMarket] = useState<Market>("Private Equity");
   const [activeTab, setActiveTab] = useState<TimeTabId>("24h");
   const [activeSector, setActiveSector] = useState<string>(ALL_SECTORS);
   const [activeFirm, setActiveFirm] = useState<string>("");
   const [query, setQuery] = useState("");
   const { readIds, markAsRead } = useReadArticles();
 
+  const marketArticles = useMemo(
+    () => articles.filter((a) => articleMarket(a) === activeMarket),
+    [articles, activeMarket]
+  );
+
   const sectors = useMemo(() => {
-    const found = new Set(articles.map((a) => a.sector).filter((s): s is string => Boolean(s)));
+    const found = new Set(marketArticles.map((a) => a.sector).filter((s): s is string => Boolean(s)));
     return [ALL_SECTORS, ...Array.from(found).sort()];
-  }, [articles]);
+  }, [marketArticles]);
 
   const firms = useMemo(() => {
-    const found = new Set(articles.flatMap((a) => a.firms ?? []));
+    const found = new Set(marketArticles.flatMap((a) => a.firms ?? []));
     return Array.from(found).sort();
-  }, [articles]);
+  }, [marketArticles]);
 
   const filtered = useMemo(() => {
     const tab = TIME_TABS.find((t) => t.id === activeTab)!;
@@ -37,16 +54,36 @@ export function NewsFeed({ articles }: { articles: Article[] }) {
     const cutoff = Date.now() - tab.ms;
     const q = query.trim().toLowerCase();
 
-    return articles
+    return marketArticles
       .filter((a) => new Date(a.publishedAt).getTime() >= cutoff)
       .filter((a) => activeSector === ALL_SECTORS || a.sector === activeSector)
       .filter((a) => !activeFirm || a.firms?.includes(activeFirm))
       .filter((a) => !q || a.title.toLowerCase().includes(q) || a.summary.toLowerCase().includes(q))
       .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
-  }, [articles, activeTab, activeSector, activeFirm, query]);
+  }, [marketArticles, activeTab, activeSector, activeFirm, query]);
 
   return (
     <div className="flex w-full flex-col">
+      <div className="flex border-b border-zinc-200 px-6 pt-4 sm:px-10 lg:px-16 dark:border-zinc-800">
+        {MARKETS.map((market) => (
+          <button
+            key={market}
+            onClick={() => {
+              setActiveMarket(market);
+              setActiveSector(ALL_SECTORS);
+              setActiveFirm("");
+            }}
+            className={`mr-6 pb-3 text-lg font-bold transition-colors ${
+              activeMarket === market
+                ? "text-zinc-900 dark:text-zinc-50"
+                : "text-zinc-400 hover:text-zinc-600 dark:text-zinc-600 dark:hover:text-zinc-400"
+            }`}
+          >
+            {MARKET_LABELS[market]}
+          </button>
+        ))}
+      </div>
+
       <nav className="sticky top-0 z-10 flex border-b border-zinc-200 bg-white/90 backdrop-blur dark:border-zinc-800 dark:bg-black/90">
         {TIME_TABS.map((tab) => (
           <button

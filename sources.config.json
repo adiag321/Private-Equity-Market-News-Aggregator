@@ -1,13 +1,23 @@
 {
-  "gnews": {
-    "query": "\"private equity\" OR buyout OR LBO",
-    "lang": "en",
-    "max": 25
-  },
+  "gnews": [
+    {
+      "category": "Private Equity",
+      "query": "\"private equity\" OR buyout OR LBO",
+      "lang": "en",
+      "max": 25
+    },
+    {
+      "category": "Venture Capital",
+      "query": "\"venture capital\" OR \"seed funding\" OR \"Series A\" OR \"Series B\" OR startup funding",
+      "lang": "en",
+      "max": 25
+    }
+  ],
   "rssFeeds": [
     { "name": "Yahoo Finance", "url": "https://finance.yahoo.com/news/rssindex" },
     { "name": "PE Hub", "url": "https://www.pehub.com/feed/" },
-    { "name": "Private Equity Wire", "url": "https://www.privateequitywire.co.uk/feed/" }
+    { "name": "Private Equity Wire", "url": "https://www.privateequitywire.co.uk/feed/" },
+    { "name": "TechCrunch Venture", "url": "https://techcrunch.com/category/venture/feed/" }
   ],
   "keywordFilters": [
     "private equity",
@@ -17,8 +27,33 @@
     "\\bLBO\\b",
     "\\bM&A\\b",
     "portfolio company",
-    "venture capital"
+    "venture capital",
+    "seed funding",
+    "seed round",
+    "series [abcde]\\b",
+    "startup funding",
+    "early-stage",
+    "\\bVC\\b"
   ],
+  "categoryKeywords": {
+    "Venture Capital": [
+      "venture capital",
+      "seed funding",
+      "seed round",
+      "series [abcde]\\b",
+      "startup funding",
+      "early-stage",
+      "\\bVC\\b",
+      "\\bstartup\\b"
+    ],
+    "Private Equity": [
+      "private equity",
+      "buyout",
+      "leveraged buyout",
+      "\\bLBO\\b",
+      "portfolio company"
+    ]
+  },
   "tagKeywords": [
     "Buyout",
     "Venture",
@@ -49,7 +84,15 @@
     "Hellman & Friedman",
     "Leonard Green",
     "Permira",
-    "Providence Equity"
+    "Providence Equity",
+    "Sequoia Capital",
+    "Andreessen Horowitz",
+    "Accel",
+    "Benchmark",
+    "Lightspeed Venture Partners",
+    "Kleiner Perkins",
+    "Greylock",
+    "Y Combinator"
   ],
   "sectors": {
     "Tech": ["software", "technology", "SaaS", "fintech", "semiconductor", "AI\\b"],

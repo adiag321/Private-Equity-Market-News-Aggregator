@@ -7,6 +7,7 @@ export type Article = {
   publishedAt: string; // ISO 8601 date string
   fetchedAt: string; // Timestamp of when the fetch script grabbed it
   tags?: string[]; // Basic PE keyword tags (e.g. "Buyout", "M&A")
-  firms?: string[]; // PE firm names mentioned (e.g. "KKR", "Blackstone")
+  firms?: string[]; // PE/VC firm names mentioned (e.g. "KKR", "Sequoia Capital")
   sector?: string; // Inferred sector (e.g. "Tech", "Healthcare")
+  category: "Private Equity" | "Venture Capital";
 };

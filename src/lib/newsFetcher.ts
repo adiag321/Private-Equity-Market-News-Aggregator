@@ -16,6 +16,10 @@ const sectorEntries = Object.entries(sourcesConfig.sectors).map(([sector, keywor
   sector,
   regex: new RegExp((keywords as string[]).join("|"), "i"),
 }));
+const categoryEntries = Object.entries(sourcesConfig.categoryKeywords).map(([category, keywords]) => ({
+  category: category as Article["category"],
+  regex: new RegExp((keywords as string[]).join("|"), "i"),
+}));
 
 export type FetchFailure = { source: string; message: string; timestamp: string };
 
@@ -41,12 +45,21 @@ function inferSector(text: string): string | undefined {
   return sectorEntries.find(({ regex }) => regex.test(text))?.sector;
 }
 
+function classifyCategory(text: string): Article["category"] {
+  // Venture Capital keywords are more specific, so check them first;
+  // default to Private Equity since that's the broader/original scope.
+  const vc = categoryEntries.find((c) => c.category === "Venture Capital");
+  if (vc?.regex.test(text)) return "Venture Capital";
+  return "Private Equity";
+}
+
 function toArticle(input: {
   title: string;
   url: string;
   summary?: string | null;
   sourceName?: string | null;
   publishedAt?: string | null;
+  category?: Article["category"];
 }): Article {
   const safeSummary = input.summary?.trim() ? input.summary.trim().slice(0, 400) : "No summary available.";
   const haystack = `${input.title} ${safeSummary}`;
@@ -61,19 +74,27 @@ function toArticle(input: {
     tags: tagArticle(haystack),
     firms: matchFirms(haystack),
     sector: inferSector(haystack),
+    category: input.category ?? classifyCategory(haystack),
   };
 }
 
-async function fetchFromGNews(apiKey: string | undefined, failures: FetchFailure[]): Promise<Article[]> {
-  if (!apiKey) {
-    failures.push({ source: "gnews", message: "GNEWS_API_KEY not set — skipped", timestamp: new Date().toISOString() });
-    return [];
-  }
+type GNewsArticle = {
+  title: string;
+  url: string;
+  description?: string;
+  publishedAt?: string;
+  source?: { name?: string };
+};
 
+async function fetchGNewsQuery(
+  queryConfig: { category: string; query: string; lang: string; max: number },
+  apiKey: string,
+  failures: FetchFailure[]
+): Promise<Article[]> {
   const url = new URL("https://gnews.io/api/v4/search");
-  url.searchParams.set("q", sourcesConfig.gnews.query);
-  url.searchParams.set("lang", sourcesConfig.gnews.lang || "en");
-  url.searchParams.set("max", String(sourcesConfig.gnews.max || 25));
+  url.searchParams.set("q", queryConfig.query);
+  url.searchParams.set("lang", queryConfig.lang || "en");
+  url.searchParams.set("max", String(queryConfig.max || 25));
   url.searchParams.set("apikey", apiKey);
 
   try {
@@ -82,13 +103,6 @@ async function fetchFromGNews(apiKey: string | undefined, failures: FetchFailure
       throw new Error(`GNews API responded ${res.status}: ${await res.text()}`);
     }
     const data = await res.json();
-    type GNewsArticle = {
-      title: string;
-      url: string;
-      description?: string;
-      publishedAt?: string;
-      source?: { name?: string };
-    };
     return ((data.articles as GNewsArticle[]) || []).map((a) =>
       toArticle({
         title: a.title,
@@ -96,12 +110,34 @@ async function fetchFromGNews(apiKey: string | undefined, failures: FetchFailure
         summary: a.description,
         sourceName: a.source?.name,
         publishedAt: a.publishedAt,
+        category: queryConfig.category as Article["category"],
       })
     );
   } catch (err) {
-    failures.push({ source: "gnews", message: (err as Error).message, timestamp: new Date().toISOString() });
+    failures.push({
+      source: `gnews:${queryConfig.category}`,
+      message: (err as Error).message,
+      timestamp: new Date().toISOString(),
+    });
     return [];
   }
+}
+
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function fetchFromGNews(apiKey: string | undefined, failures: FetchFailure[]): Promise<Article[]> {
+  if (!apiKey) {
+    failures.push({ source: "gnews", message: "GNEWS_API_KEY not set — skipped", timestamp: new Date().toISOString() });
+    return [];
+  }
+
+  // Run sequentially with a short gap — GNews's free tier rate-limits rapid concurrent requests.
+  const results: Article[] = [];
+  for (const [index, queryConfig] of sourcesConfig.gnews.entries()) {
+    if (index > 0) await sleep(1200);
+    results.push(...(await fetchGNewsQuery(queryConfig, apiKey, failures)));
+  }
+  return results;
 }
 
 async function fetchFromRss(failures: FetchFailure[]): Promise<Article[]> {

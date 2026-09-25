@@ -6,10 +6,11 @@
     "summary": "Women account for 23% of investment professionals across European private equity and venture capital, but hold just 13% of senior investment roles, according to Level 20’s 2026 European Gender Diversity Report.",
     "sourceName": "Private Equity Wire",
     "publishedAt": "2026-09-25T15:01:10.000Z",
-    "fetchedAt": "2026-09-25T17:30:40.279Z",
+    "fetchedAt": "2026-09-25T19:06:56.907Z",
     "tags": [
       "Venture"
-    ]
+    ],
+    "category": "Venture Capital"
   },
   {
     "id": "40f52bd52360631a",
@@ -18,13 +19,14 @@
     "summary": "Preventing illness and injury at work has created demand for occupational health services, which is attracting PE investors; May River Capital’s sale of an environmental monitoring platform to a Blackstone portfolio company; insights on the geriatric Medicare market and a deal that TPG made in the sector.\nThe post Phoenix, Quad-C, Thoma Bravo target occupational health; Pharmaceutical growth drive",
     "sourceName": "PE Hub",
     "publishedAt": "2026-09-25T13:38:09.000Z",
-    "fetchedAt": "2026-09-25T17:30:39.221Z",
+    "fetchedAt": "2026-09-25T19:06:55.797Z",
     "firms": [
       "Blackstone",
       "TPG",
       "Thoma Bravo"
     ],
-    "sector": "Healthcare"
+    "sector": "Healthcare",
+    "category": "Private Equity"
   },
   {
     "id": "8c8e096046f1425f",
@@ -33,10 +35,11 @@
     "summary": "Founded in 1901, Cranford, New Jersey-based JACLO makes and distributes decorative bath fixtures and plumbing products.\nThe post Clearlake’s PrimeSource Brands adds JACLO in 12th acquisition since 2020 appeared first on PE Hub.",
     "sourceName": "PE Hub",
     "publishedAt": "2026-09-25T13:07:54.000Z",
-    "fetchedAt": "2026-09-25T17:30:39.222Z",
+    "fetchedAt": "2026-09-25T19:06:55.798Z",
     "tags": [
       "Acquisition"
-    ]
+    ],
+    "category": "Private Equity"
   },
   {
     "id": "de4a46ebb4ec4785",
@@ -45,7 +48,8 @@
     "summary": "Private equity firm Uplift Investors has expanded its investment strategy in the legal sector through a new management services organisation partnership with Arkansas-based personal injury firm Rainwater, Holt & Sexton.",
     "sourceName": "Private Equity Wire",
     "publishedAt": "2026-09-25T09:20:00.000Z",
-    "fetchedAt": "2026-09-25T17:30:40.279Z"
+    "fetchedAt": "2026-09-25T19:06:56.907Z",
+    "category": "Private Equity"
   },
   {
     "id": "0f99d3c8c100e118",
@@ -54,14 +58,15 @@
     "summary": "Renewable fuels producer EcoCeres is targeting a Hong Kong initial public offering that could raise around $1bn, with private equity investor Bain Capital expected to sell part of its stake, according to a report by Reuters citing unnamed people familiar with the plans.",
     "sourceName": "Private Equity Wire",
     "publishedAt": "2026-09-25T09:15:54.000Z",
-    "fetchedAt": "2026-09-25T17:30:40.279Z",
+    "fetchedAt": "2026-09-25T19:06:56.907Z",
     "tags": [
       "IPO"
     ],
     "firms": [
       "Bain Capital"
     ],
-    "sector": "Infrastructure"
+    "sector": "Infrastructure",
+    "category": "Private Equity"
   },
   {
     "id": "6253686a315d3933",
@@ -70,7 +75,22 @@
     "summary": "The NFL has no immediate plans to increase its 10% cap on team ownership stakes for private equity firms, despite recent moves by Major League Baseball and the NBA to loosen their respective restrictions, according to a report by Front Office Sports.",
     "sourceName": "Private Equity Wire",
     "publishedAt": "2026-09-25T09:13:02.000Z",
-    "fetchedAt": "2026-09-25T17:30:40.279Z"
+    "fetchedAt": "2026-09-25T19:06:56.907Z",
+    "category": "Private Equity"
+  },
+  {
+    "id": "01381d020455ce9c",
+    "title": "Paramount Seeks to Raise $7.5bn to Finance Warner Bros Discovery Buyout",
+    "url": "https://www.marketscreener.com/news/paramount-seeks-to-raise-7-5bn-to-finance-warner-bros-discovery-buyout-ce785aded08af726",
+    "summary": "Paramount Skydance has launched the syndication of a $7.5bn senior secured term loan to help finance its $110bn acquisition of Warner Bros Discovery. The move comes after deals reached with several US...",
+    "sourceName": "MarketScreener",
+    "publishedAt": "2026-09-25T06:59:10.000Z",
+    "fetchedAt": "2026-09-25T19:06:53.012Z",
+    "tags": [
+      "Buyout",
+      "Acquisition"
+    ],
+    "category": "Private Equity"
   },
   {
     "id": "ab025dcf690c0f84",
@@ -79,10 +99,40 @@
     "summary": "Move follows HSBC’s US$14 billion buyout of remaining Hang Seng shares, with the overhaul targeting US$900 billion in combined synergies by 2028.",
     "sourceName": "South China Morning Post",
     "publishedAt": "2026-09-25T05:26:34.000Z",
-    "fetchedAt": "2026-09-25T17:30:37.262Z",
+    "fetchedAt": "2026-09-25T19:06:53.012Z",
     "tags": [
       "Buyout"
-    ]
+    ],
+    "category": "Private Equity"
+  },
+  {
+    "id": "ff3979163f0a6a79",
+    "title": "Lightspeed targets $250M for new India fund, focusing on early-stage AI",
+    "url": "https://techcrunch.com/2026/09/24/lightspeed-targets-250m-for-new-india-fund-focusing-on-early-stage-ai/",
+    "summary": "The venture firm is aligning its India fundraising cycle with its global funds for the first time, as it shifts to a shorter investment period.",
+    "sourceName": "TechCrunch Venture",
+    "publishedAt": "2026-09-25T05:00:00.000Z",
+    "fetchedAt": "2026-09-25T19:06:57.100Z",
+    "tags": [
+      "Venture",
+      "Fundraising"
+    ],
+    "sector": "Tech",
+    "category": "Venture Capital"
+  },
+  {
+    "id": "18d9fbf54d45bcd6",
+    "title": "Venture Capital & Startup Funding Roundup, September 24, 2026: ARK Invest, Evolution Equity, Mirae Asset Capital, Socratic Partners & More",
+    "url": "https://techstartups.com/2026/09/24/venture-capital-startup-funding-roundup-september-24-2026-ark-invest-evolution-equity-mirae-asset-capital-socratic-partners-more/",
+    "summary": "Venture capital today is clustering around companies that control a hard bottleneck rather than simply adding another application layer. The largest checks in the latest 12-hour window went to an enterprise-security browser, a brain-computer interface company, an alternative pharmacy-benefits platform, AI-driven drug discovery, and programmable financial infrastructure. That is a telling mix: inve",
+    "sourceName": "TechStartups.com",
+    "publishedAt": "2026-09-24T23:11:35.000Z",
+    "fetchedAt": "2026-09-25T19:07:24.938Z",
+    "tags": [
+      "Venture"
+    ],
+    "sector": "Tech",
+    "category": "Venture Capital"
   },
   {
     "id": "d1b2a1ffa850d076",
@@ -91,10 +141,11 @@
     "summary": "Not every takeover attempt reaches the finish line — sometimes the pieces just don't fit together no matter how much money is on the table. People Inc. has confirmed exactly that, announcing it has withdrawn its June proposal to purchase all public shares of MGM Resorts International and take the company private, a move guided People to acquire MGM plan scrapped after $18B buyout offer withdrawn.",
     "sourceName": "USA Herald",
     "publishedAt": "2026-09-24T21:03:05.000Z",
-    "fetchedAt": "2026-09-25T17:30:37.263Z",
+    "fetchedAt": "2026-09-25T19:06:53.013Z",
     "tags": [
       "Buyout"
-    ]
+    ],
+    "category": "Private Equity"
   },
   {
     "id": "eb641c51284c2a6c",
@@ -103,7 +154,18 @@
     "summary": "For many years, private equity was ascendant on Wall Street. Now, however, the industry is in the doldrums. Find out more here",
     "sourceName": "Financial Post",
     "publishedAt": "2026-09-24T19:33:19.000Z",
-    "fetchedAt": "2026-09-25T17:30:37.264Z"
+    "fetchedAt": "2026-09-25T19:06:53.013Z",
+    "category": "Private Equity"
+  },
+  {
+    "id": "8a6e3de1870d2073",
+    "title": "Assam’s startup ecosystem gains momentum; 52.6% founded by women: IIMCIP Report",
+    "url": "https://timesofindia.indiatimes.com/city/guwahati/assams-startup-ecosystem-gains-momentum-52-6-founded-by-women-iimcip-report/articleshow/134468586.cms",
+    "summary": "IIMCIP’s Assam Startup Ecosystem Report finds 52.6% of surveyed startups are women-founded; funding gaps persist; calls for mentorship, networks, R&D, and support.",
+    "sourceName": "Times of India",
+    "publishedAt": "2026-09-24T18:27:00.000Z",
+    "fetchedAt": "2026-09-25T19:07:24.938Z",
+    "category": "Venture Capital"
   },
   {
     "id": "42f1566e1e5a19bb",
@@ -112,7 +174,21 @@
     "summary": "Uplift Investors, a Darien, Connecticut-based private equity firm, said Thursday it has inked its sixth deal ​to invest in a law firm's back-office operations ‌through a management services organization, this time with an Arkansas-based personal injury firm.",
     "sourceName": "Reuters",
     "publishedAt": "2026-09-24T17:05:02.000Z",
-    "fetchedAt": "2026-09-25T17:30:37.264Z"
+    "fetchedAt": "2026-09-25T19:06:53.013Z",
+    "category": "Private Equity"
+  },
+  {
+    "id": "a6e0c2c45467c587",
+    "title": "Ando wants to take on Slack with a team messaging app that lets humans and agents work together",
+    "url": "https://techcrunch.com/2026/09/24/ando-eyes-slack-as-it-builds-team-messaging-platform-for-humans-and-agents-to-work-together/",
+    "summary": "Ando has raised $20 million in pre-seed and seed funding from investors including Accel, Index Ventures and Emergence.",
+    "sourceName": "TechCrunch",
+    "publishedAt": "2026-09-24T14:31:00.000Z",
+    "fetchedAt": "2026-09-25T19:07:24.938Z",
+    "firms": [
+      "Accel"
+    ],
+    "category": "Venture Capital"
   },
   {
     "id": "c4df4e45ceb809cc",
@@ -121,10 +197,21 @@
     "summary": "Shares of MGM Resorts fell significantly after the withdrawal of an $18 billion buyout offer from People Inc. According to Barry Diller, the proposed buy was not developing as anticipated. The deal was aimed at expanding People Inc's operations beyond traditional media ventures. MGM owns significant assets on the Las Vegas Strip, but its growth has been inconsistent recently.",
     "sourceName": "The Economic Times",
     "publishedAt": "2026-09-24T13:57:00.000Z",
-    "fetchedAt": "2026-09-25T17:30:37.264Z",
+    "fetchedAt": "2026-09-25T19:06:53.013Z",
     "tags": [
       "Buyout"
-    ]
+    ],
+    "category": "Private Equity"
+  },
+  {
+    "id": "6b2691d2ccb5798e",
+    "title": "India tech funding rises 7% to $10.3 billion in 9M 2026",
+    "url": "https://www.thehindubusinessline.com/info-tech/india-tech-funding-rises-7-to-103-billion-in-9m-2026/article71504500.ece",
+    "summary": "Seed funding fell 37% to $698M, while early-stage funding rose 27% to $4.2B and late-stage held roughly steady at $5.4B",
+    "sourceName": "The Hindu Business Line",
+    "publishedAt": "2026-09-24T13:53:39.000Z",
+    "fetchedAt": "2026-09-25T19:07:24.938Z",
+    "category": "Venture Capital"
   },
   {
     "id": "19cadbc63fd6da22",
@@ -133,7 +220,18 @@
     "summary": "Zurich Film Festival reaffirms its role as awards launchpad, wants to become world-leading film financing destination with focus on private equity.",
     "sourceName": "Variety",
     "publishedAt": "2026-09-24T13:52:40.000Z",
-    "fetchedAt": "2026-09-25T17:30:37.264Z"
+    "fetchedAt": "2026-09-25T19:06:53.013Z",
+    "category": "Private Equity"
+  },
+  {
+    "id": "2408ced12e089e76",
+    "title": "based Cybersecurity startup Island valued at $6.4 billion",
+    "url": "https://www.dallasnews.com/business/technology/article/island-cybersecurity-valuation-22446958.php",
+    "summary": "Cybersecurity startup Island said on Thursday it raised $400 million in a funding round that valued it at $6.4 billion.",
+    "sourceName": "The Dallas Morning News",
+    "publishedAt": "2026-09-24T13:40:54.000Z",
+    "fetchedAt": "2026-09-25T19:07:24.938Z",
+    "category": "Venture Capital"
   },
   {
     "id": "93df3541424e2d26",
@@ -142,7 +240,8 @@
     "summary": "Top 1000: Succession challenges and economies of scale are driving a wave of consolidation across fragmented sectors, writes Danielle Barron",
     "sourceName": "The Irish Times",
     "publishedAt": "2026-09-24T13:30:00.000Z",
-    "fetchedAt": "2026-09-25T17:30:37.265Z"
+    "fetchedAt": "2026-09-25T19:06:53.013Z",
+    "category": "Private Equity"
   },
   {
     "id": "b96d08c3417c8f8a",
@@ -151,13 +250,61 @@
     "summary": "CVC Capital Partners and Nippon Sangyo Suishin Kiko are weighing a bid to take the company private, sources said.",
     "sourceName": "The Japan Times ",
     "publishedAt": "2026-09-24T12:36:35.000Z",
-    "fetchedAt": "2026-09-25T17:30:37.265Z",
+    "fetchedAt": "2026-09-25T19:06:53.013Z",
     "tags": [
       "Buyout"
     ],
     "firms": [
       "CVC Capital"
-    ]
+    ],
+    "category": "Private Equity"
+  },
+  {
+    "id": "2bcbb12a09ab099d",
+    "title": "Startup Funding News Today, September 24, 2026: 50Skills, ByteAsk, Pilgrim, Kasvu Therapeutics, Puxi Optoelectronics & More",
+    "url": "https://techstartups.com/2026/09/24/startup-funding-news-today-september-24-2026-50skills-byteask-pilgrim-kasvu-therapeutics-puxi-optoelectronics-more/",
+    "summary": "Today’s startup funding activity centers on a different kind of scarcity: biosecurity, specialized semiconductors, proprietary healthcare data, vertical AI workflows, and the infrastructure needed to run increasingly capable software inside real businesses. The largest newly surfaced financings are coming from China’s semiconductor sector. Hangzhou-based Puxi Optoelectronics completed a Series C w",
+    "sourceName": "TechStartups.com",
+    "publishedAt": "2026-09-24T12:28:27.000Z",
+    "fetchedAt": "2026-09-25T19:07:24.938Z",
+    "sector": "Tech",
+    "category": "Venture Capital"
+  },
+  {
+    "id": "5300a6aec095c77d",
+    "title": "AI startup Island valued at $6.4 billion in latest funding round",
+    "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/ai-startup-island-valued-at-6-4-billion-in-latest-funding-round/articleshow/134461377.cms",
+    "summary": "AI startup Island successfully raised $400 million in a Series F funding round led by Evolution Equity Partners. The company is valued at $6.4 billion following this latest investment round. Existing investors, including Sequoia Capital and JP Morgan Growth Equity Partners, also participated in the funding. The Dallas-based company focuses on developing enterprise security tools for businesses.",
+    "sourceName": "The Economic Times",
+    "publishedAt": "2026-09-24T11:54:40.000Z",
+    "fetchedAt": "2026-09-25T19:07:24.938Z",
+    "firms": [
+      "Sequoia Capital"
+    ],
+    "sector": "Tech",
+    "category": "Venture Capital"
+  },
+  {
+    "id": "2d5be489f6eb87dc",
+    "title": "Browser security startup Island raises $400M at $6.4B valuation to defend against rogue AI agents",
+    "url": "https://techstartups.com/2026/09/24/browser-security-startup-island-raises-400m-at-6-4b-valuation-to-defend-against-rogue-ai-agents/",
+    "summary": "Browser security startup Island has raised $400 million at a $6.4 billion valuation as companies confront a new security problem: AI agents that can browse websites, access corporate systems, handle files, and take actions with far less human supervision. The Dallas-based startup announced the funding Thursday, with Evolution Equity Partners leading the round. Island plans",
+    "sourceName": "TechStartups.com",
+    "publishedAt": "2026-09-24T11:53:49.000Z",
+    "fetchedAt": "2026-09-25T19:07:24.938Z",
+    "sector": "Tech",
+    "category": "Venture Capital"
+  },
+  {
+    "id": "05b2279cd9cce12e",
+    "title": "Cybersecurity startup Island valued at $6.4 billion amid AI agent security risks",
+    "url": "https://www.reuters.com/technology/ai-startup-island-valued-64-billion-latest-funding-round-2026-09-24/",
+    "summary": "Cybersecurity startup Island said on Thursday it raised $400 million in a funding round that valued it ​at $6.4 billion, signalling growing interest in the sector ‌as rapid adoption of artificial intelligence creates rampant new security risks.",
+    "sourceName": "Reuters",
+    "publishedAt": "2026-09-24T10:37:54.000Z",
+    "fetchedAt": "2026-09-25T19:07:24.938Z",
+    "sector": "Tech",
+    "category": "Venture Capital"
   },
   {
     "id": "e7647312022c5cf0",
@@ -166,203 +313,33 @@
     "summary": "STORIES OF TRANSFORMATION: Following the deregulation of the water market in England, private equity firm Perwyn eyed an opportunity to invest in Everflow, supporting the transformation of the business from a water retailer into a wider utilities offering.",
     "sourceName": "Private Equity Wire",
     "publishedAt": "2026-09-24T09:59:54.000Z",
-    "fetchedAt": "2026-09-25T17:30:40.279Z",
-    "sector": "Infrastructure"
+    "fetchedAt": "2026-09-25T19:06:56.907Z",
+    "sector": "Infrastructure",
+    "category": "Private Equity"
   },
   {
-    "id": "41909bbcbb1cc5fc",
-    "title": "Haelan Capital Partners debuts; KKR launches Akrapoint Commercial Capital; PE bets on rail services",
-    "url": "https://www.pehub.com/haelan-capital-partners-debuts-kkr-launches-akrapoint-commercial-capital-pe-bets-on-rail-services/",
-    "summary": "A new healthcare focused shop, Haelan Capital Partners, has launched today; private equity firms have taken note of pent-up demand for rail services and are allocating money to the sector; KKR launches Akrapoint Commercial Capital; Odyssey Investment Partners makes a majority investment in Falcon Gases.\nThe post Haelan Capital Partners debuts; KKR launches Akrapoint Commercial Capital; PE bets on ",
-    "sourceName": "PE Hub",
-    "publishedAt": "2026-09-22T13:39:59.000Z",
-    "fetchedAt": "2026-09-23T04:20:55.423Z"
+    "id": "ed90c2b0743c1f98",
+    "title": "VC firm Bessemer now has another $5.75B to invest in (what else?) AI",
+    "url": "https://techcrunch.com/2026/09/23/vc-firm-bessemer-now-has-another-5-75b-to-invest-in-what-else-ai/",
+    "summary": "The VC firm says that AI-native companies are growing faster than any technology, ever.",
+    "sourceName": "TechCrunch Venture",
+    "publishedAt": "2026-09-23T20:35:17.000Z",
+    "fetchedAt": "2026-09-25T19:06:57.100Z",
+    "sector": "Tech",
+    "category": "Venture Capital"
   },
   {
-    "id": "b73a2b3a7eb3151b",
-    "title": "The Truth About Private Equity Consolidation: Check the Math",
-    "url": "https://www.kiplinger.com/business/small-business/private-equity-independent-clinical-practices",
-    "summary": "Don't believe the hype around private equity eating up independent clinical practices. This is the best way to respond when a salesperson calls with an offer.",
-    "sourceName": "Kiplinger",
-    "publishedAt": "2026-09-22T12:00:00.000Z",
-    "fetchedAt": "2026-09-23T04:24:51.818Z"
-  },
-  {
-    "id": "d66d1ccf61f71cfa",
-    "title": "CD&R and Warburg Pincus in joint bid for Canaccord Wealth, sources say",
-    "url": "https://www.reuters.com/legal/transactional/cdr-warburg-pincus-joint-bid-canaccord-wealth-sources-say-2026-09-22/",
-    "summary": "Private equity groups CD&R and Warburg Pincus are in talks ​to buy Canaccord Genuity’s British wealth arm, Canaccord ‌Wealth, two people familiar with the matter said.",
-    "sourceName": "Reuters",
-    "publishedAt": "2026-09-22T11:48:41.000Z",
-    "fetchedAt": "2026-09-23T04:24:51.819Z"
-  },
-  {
-    "id": "dd00a24eae4409f8",
-    "title": "Grant Thornton’s UK boss defends private equity ownership",
-    "url": "https://www.irishtimes.com/business/2026/09/22/grant-thorntons-uk-boss-defends-private-equity-ownership/",
-    "summary": "Malcolm Gomersall says new structure will improve audit quality due to increased scrutiny",
-    "sourceName": "The Irish Times",
-    "publishedAt": "2026-09-22T10:08:22.000Z",
-    "fetchedAt": "2026-09-23T04:24:51.819Z"
-  },
-  {
-    "id": "2ccfdf27f072fbb2",
-    "title": "Alternative Views with Barings’s Stuart Mathieson",
-    "url": "https://www.privateequitywire.co.uk/alternative-views-with-baringss-stuart-mathieson/",
-    "summary": "In Alternative Views, Private Equity Wire® goes behind closed doors with those in the know to get the latest on private markets. In this episode we discuss sponsor-backed lending with Stuart Mathieson, head of European private finance at Barings.",
-    "sourceName": "Private Equity Wire",
-    "publishedAt": "2026-09-22T09:44:25.000Z",
-    "fetchedAt": "2026-09-23T04:20:57.350Z"
-  },
-  {
-    "id": "1dd1d7d08ed814c3",
-    "title": "Silver Lake takes legal action against Icahn and hedge funds over Endeavor feal",
-    "url": "https://www.privateequitywire.co.uk/silver-lake-takes-legal-action-against-icahn-and-hedge-funds-over-endeavor-feal/",
-    "summary": "Silver Lake has launched legal action against Carl Icahn and a group of hedge funds in Delaware, seeking to prevent them from using appraisal proceedings to pursue potential payouts linked to the PE firm's 2025 acquisition of Endeavor Group Holdings, according to a repot by Reuters.",
-    "sourceName": "Private Equity Wire",
-    "publishedAt": "2026-09-22T09:43:10.000Z",
-    "fetchedAt": "2026-09-23T04:20:57.349Z",
-    "tags": [
-      "Acquisition"
-    ]
-  },
-  {
-    "id": "6f5681cc229cfcd6",
-    "title": "Novo Advisors launches value creation practice for PE-backed companies",
-    "url": "https://www.privateequitywire.co.uk/v/",
-    "summary": "Management consulting firm Novo Advisors has launched a new Value Creation practice aimed at helping private equity, venture capital and other investor-backed businesses improve financial performance and operational execution.",
-    "sourceName": "Private Equity Wire",
-    "publishedAt": "2026-09-22T09:40:06.000Z",
-    "fetchedAt": "2026-09-23T04:20:57.349Z",
+    "id": "0f47fbb0da8ec950",
+    "title": "StrictlyVC at TechCrunch Disrupt 2026: Inside the changing rules of venture capital",
+    "url": "https://techcrunch.com/2026/09/23/strictlyvc-at-techcrunch-disrupt-2026-inside-the-changing-rules-of-venture-capital/",
+    "summary": "StrictlyVC joins TechCrunch Disrupt 2026 to discuss the changing VC landscape thanks to AI. Get your Investor Pass to join these exclusive sessions. Save $200 before September 25 at 11:59 p.m. PT.",
+    "sourceName": "TechCrunch Venture",
+    "publishedAt": "2026-09-23T14:30:00.000Z",
+    "fetchedAt": "2026-09-25T19:06:57.100Z",
     "tags": [
       "Venture"
-    ]
-  },
-  {
-    "id": "b7a2794c5afcac46",
-    "title": "KKR targets Korea’s AI supply chain after record $3bn investment",
-    "url": "https://www.privateequitywire.co.uk/kkr-targets-koreas-ai-supply-chain-after-record-3bn-investment/",
-    "summary": "TOP STORY: KKR is looking to expand its investment activity in South Korea after deploying around $3bn in the country this year, with the private equity firm targeting opportunities created by the rapid expansion of artificial intelligence infrastructure, according to a report by Bloomberg.",
-    "sourceName": "Private Equity Wire",
-    "publishedAt": "2026-09-22T09:39:43.000Z",
-    "fetchedAt": "2026-09-23T04:20:57.349Z"
-  },
-  {
-    "id": "75e1e1bb1afef7b0",
-    "title": "Hg expands Anthropic partnership to deploy agentic AI across portfolio",
-    "url": "https://www.privateequitywire.co.uk/hg-expands-anthropic-partnership-to-deploy-agentic-ai-across-portfolio/",
-    "summary": "Private equity firm Hg is expanding its relationship with artificial intelligence company Anthropic as it seeks to deploy agentic AI capabilities across its portfolio and accelerate value creation at its software and services businesses.",
-    "sourceName": "Private Equity Wire",
-    "publishedAt": "2026-09-22T09:38:32.000Z",
-    "fetchedAt": "2026-09-23T04:20:57.349Z"
-  },
-  {
-    "id": "eed17739334293df",
-    "title": "Grant Thornton CEO defends Cinven ownership",
-    "url": "https://www.privateequitywire.co.uk/grant-thornton-ceo-defends-cinven-ownership/",
-    "summary": "Grant Thornton UK chief executive Malcolm Gomersall has defended the accounting firm's private equity ownership, arguing that Cinven's investment has increased scrutiny of audit quality rather than undermining it, according top a report by the Financial Times.",
-    "sourceName": "Private Equity Wire",
-    "publishedAt": "2026-09-22T09:37:20.000Z",
-    "fetchedAt": "2026-09-23T04:20:57.349Z"
-  },
-  {
-    "id": "6d0c3592db5f8f3f",
-    "title": "Clearlake and Charlesbank to inject $175m into distressed Symplr",
-    "url": "https://www.privateequitywire.co.uk/clearlake-and-charlesbank-to-inject-175m-into-distressed-symplr/",
-    "summary": "Private equity firms Clearlake Capital Group and Charlesbank Capital Partners have agreed to provide around $175m of preferred equity to healthcare software provider Symplr as part of a restructuring designed to shore up the company's finances and push out debt maturities, according to a report by Bloomberg.",
-    "sourceName": "Private Equity Wire",
-    "publishedAt": "2026-09-22T09:34:29.000Z",
-    "fetchedAt": "2026-09-23T04:20:57.349Z"
-  },
-  {
-    "id": "fef2344cb8168450",
-    "title": "Private-equity legend David Rubenstein on owning the Baltimore Orioles, and how sports ownership became big business",
-    "url": "https://fortune.com/2026/09/22/david-rubenstein-baltimore-orioles-book-excerpt-inside-owners-box/",
-    "summary": "The Carlyle co-founder is a billionaire and a giant name in modern finance. His new book looks at sports ownership through a different lens.",
-    "sourceName": "Fortune",
-    "publishedAt": "2026-09-22T09:00:00.000Z",
-    "fetchedAt": "2026-09-23T04:24:51.819Z"
-  },
-  {
-    "id": "33cfbd2b04058d9e",
-    "title": "Factory floor or family office? India’s young rich alarm elders",
-    "url": "https://economictimes.indiatimes.com/news/company/corporate-trends/factory-floor-or-family-office-india-young-rich-alarm-elders-inheritence-wealth-management-private-equity-alok-sanghi-industries-gautam-adani-ambuja-cements-dabur-homemade-baker/articleshow/134400278.cms",
-    "summary": "Indias wealthy business families are increasingly shifting from traditional family businesses to family offices, private equity and startup investments. The trend reflects changing succession strategies as younger heirs cash out or diversify inherited wealth. From Sanghi Industries to Dabur and Homemade Bakers, Indias next-generation business heirs are reshaping how family fortunes are managed and",
-    "sourceName": "The Economic Times",
-    "publishedAt": "2026-09-22T03:30:00.000Z",
-    "fetchedAt": "2026-09-23T04:24:51.819Z"
-  },
-  {
-    "id": "fa5054e282285b1a",
-    "title": "Florida data center developers host open house to praise benefits",
-    "url": "https://www.tcpalm.com/story/news/local/florida/2026/09/21/florida-data-center-developers-host-open-house-to-praise-benefits/91861633007/",
-    "summary": "If built, Indiantown data center would eventually be owned by a joint venture of Google and a private equity firm under the name Cruz AI.",
-    "sourceName": "TCPalm",
-    "publishedAt": "2026-09-22T01:25:31.000Z",
-    "fetchedAt": "2026-09-23T04:24:51.819Z",
-    "tags": [
-      "Venture"
-    ]
-  },
-  {
-    "id": "2382b261acc7ffbf",
-    "title": "12 States Drop Challenge To $111 Billion Paramount-Warner Deal After Winning Jobs Fund And News Safeguard",
-    "url": "https://www.republicworld.com/global-news/12-states-drop-challenge-to-111-billion-paramount-warner-deal-after-winning-jobs-fund-and-news-safeguard-2026-09-21-137436",
-    "summary": "12 states and WGA settled lawsuits allowing Paramount's $111B buyout of Warner Bros. Discovery to proceed, with a $1.5B pledge for US film production, a $47.5M worker fund, and a new board to monitor editorial independence of CBS and CNN.",
-    "sourceName": "Republic World",
-    "publishedAt": "2026-09-22T00:02:50.000Z",
-    "fetchedAt": "2026-09-23T04:24:51.819Z",
-    "tags": [
-      "Buyout"
-    ]
-  },
-  {
-    "id": "e838257b287f05df",
-    "title": "Silver Lake sues Carl Icahn and hedge funds over Endeavor buyout",
-    "url": "https://www.reuters.com/legal/government/silver-lake-sues-carl-icahn-hedge-funds-over-endeavor-buyout-2026-09-21/",
-    "summary": "Private equity firm Silver Lake sued billionaire Carl Icahn and dozens ‌of hedge funds on Monday to block their use of an obscure legal tactic to chase a potentially big payday from the company over its 2025 acquisition of the Endeavor entertainment agency.",
-    "sourceName": "Reuters",
-    "publishedAt": "2026-09-21T23:09:18.000Z",
-    "fetchedAt": "2026-09-23T04:24:51.819Z",
-    "tags": [
-      "Buyout",
-      "Acquisition"
-    ]
-  },
-  {
-    "id": "ea4947d0ae0284be",
-    "title": "States settle lawsuit over Paramount-Warner merger, clearing key hurdle for $81 billion deal",
-    "url": "https://triblive.com/aande/movies-tv/states-settle-lawsuit-over-paramount-warner-merger-clearing-key-hurdle-for-81-billion-deal/",
-    "summary": "CHICAGO — Twelve states and Hollywood writers challenging Paramount’s buyout of Warner Bros. Discovery agreed to settle their lawsuits on Monday, effectively paving the way for the $81 billion mega merger to cross the finish line, with some new commitments from the company. The blockbuster deal will still vastly reshape",
-    "sourceName": "Pittsburgh Tribune-Review",
-    "publishedAt": "2026-09-21T22:34:39.000Z",
-    "fetchedAt": "2026-09-23T04:24:51.819Z",
-    "tags": [
-      "Buyout"
-    ]
-  },
-  {
-    "id": "f090cf455b97bbb7",
-    "title": "FSU Coach Forced Into Damage Control for Mike Norvell as Alabama Loss Puts HC's $48M Buyout in Focus",
-    "url": "https://www.essentiallysports.com/ncaa-college-football-news-fsu-coach-forced-into-damage-control-for-mike-norvell-as-alabama-loss-puts-hcs-forty-eight-m-buyout-in-focus-tony-white/",
-    "summary": "Florida State defensive coordinator faces intense damage control after an Alabama blowout places head coach Mike Norvell’s $48 million buyout",
-    "sourceName": "Essentially Sports",
-    "publishedAt": "2026-09-21T21:11:40.000Z",
-    "fetchedAt": "2026-09-23T04:24:51.819Z",
-    "tags": [
-      "Buyout"
-    ]
-  },
-  {
-    "id": "f22c75319b888662",
-    "title": "Icahn, Hedge Funds Sued Over Arbitrage Bets on Endeavor Buyout",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/icahn-hedge-funds-sued-over-164021287.html",
-    "summary": "No summary available.",
-    "sourceName": "Yahoo Finance",
-    "publishedAt": "2026-09-21T16:40:21.000Z",
-    "fetchedAt": "2026-09-23T04:20:53.276Z",
-    "tags": [
-      "Buyout"
-    ]
+    ],
+    "sector": "Tech",
+    "category": "Venture Capital"
   }
 ]
