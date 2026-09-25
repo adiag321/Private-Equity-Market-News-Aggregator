@@ -52,7 +52,7 @@ export function NewsFeed({ articles }: { articles: Article[] }) {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`flex-1 px-4 py-3 text-sm font-medium transition-colors ${
+            className={`flex-1 px-6 sm:px-10 lg:px-16 py-3 text-sm font-medium transition-colors ${
               activeTab === tab.id
                 ? "border-b-2 border-zinc-900 text-zinc-900 dark:border-zinc-50 dark:text-zinc-50"
                 : "border-b-2 border-transparent text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
@@ -63,7 +63,7 @@ export function NewsFeed({ articles }: { articles: Article[] }) {
         ))}
       </nav>
 
-      <div className="flex flex-col gap-3 border-b border-zinc-200 px-4 py-3 dark:border-zinc-800">
+      <div className="flex flex-col gap-3 border-b border-zinc-200 px-6 sm:px-10 lg:px-16 py-3 dark:border-zinc-800">
         <input
           type="search"
           value={query}
@@ -107,7 +107,7 @@ export function NewsFeed({ articles }: { articles: Article[] }) {
       </div>
 
       {filtered.length === 0 ? (
-        <p className="px-4 py-16 text-center text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="px-6 sm:px-10 lg:px-16 py-16 text-center text-sm text-zinc-500 dark:text-zinc-400">
           No news published in this timeframe.
         </p>
       ) : (
@@ -115,7 +115,7 @@ export function NewsFeed({ articles }: { articles: Article[] }) {
           {filtered.map((article) => {
             const isRead = readIds.has(article.id);
             return (
-              <li key={article.id} className={`px-4 py-4 ${isRead ? "opacity-50" : ""}`}>
+              <li key={article.id} className={`px-6 sm:px-10 lg:px-16 py-4 ${isRead ? "opacity-50" : ""}`}>
                 <div className="mb-1 flex flex-wrap items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400">
                   <span>{article.sourceName}</span>
                   <span>•</span>
