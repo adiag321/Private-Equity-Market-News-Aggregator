@@ -26,5 +26,35 @@
     "IPO",
     "Acquisition",
     "Fundraising"
-  ]
+  ],
+  "firms": [
+    "KKR",
+    "Blackstone",
+    "Apollo",
+    "Carlyle",
+    "TPG",
+    "Warburg Pincus",
+    "Bain Capital",
+    "Vista Equity",
+    "Thoma Bravo",
+    "Silver Lake",
+    "CVC Capital",
+    "EQT",
+    "Advent International",
+    "Clayton, Dubilier & Rice",
+    "CD&R",
+    "Clearlake Capital",
+    "Brookfield",
+    "General Atlantic",
+    "Hellman & Friedman",
+    "Leonard Green",
+    "Permira",
+    "Providence Equity"
+  ],
+  "sectors": {
+    "Tech": ["software", "technology", "SaaS", "fintech", "semiconductor", "AI\\b"],
+    "Healthcare": ["healthcare", "health care", "pharma", "biotech", "medical", "clinical"],
+    "Real Estate": ["real estate", "property", "REIT", "commercial real estate"],
+    "Infrastructure": ["infrastructure", "energy", "utilities", "renewable", "rail", "logistics"]
+  }
 }

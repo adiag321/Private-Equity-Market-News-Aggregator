@@ -7,6 +7,16 @@ const MAX_AGE_DAYS = 31;
 const keywordRegex = new RegExp(sourcesConfig.keywordFilters.join("|"), "i");
 const rssParser = new Parser();
 
+const escapeRegex = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const firmRegexes = sourcesConfig.firms.map((firm) => ({
+  name: firm,
+  regex: new RegExp(`\\b${escapeRegex(firm)}\\b`, "i"),
+}));
+const sectorEntries = Object.entries(sourcesConfig.sectors).map(([sector, keywords]) => ({
+  sector,
+  regex: new RegExp((keywords as string[]).join("|"), "i"),
+}));
+
 export type FetchFailure = { source: string; message: string; timestamp: string };
 
 function hashId(url: string): string {
@@ -22,6 +32,15 @@ function tagArticle(text: string): string[] | undefined {
   return found.length ? found : undefined;
 }
 
+function matchFirms(text: string): string[] | undefined {
+  const found = firmRegexes.filter(({ regex }) => regex.test(text)).map(({ name }) => name);
+  return found.length ? found : undefined;
+}
+
+function inferSector(text: string): string | undefined {
+  return sectorEntries.find(({ regex }) => regex.test(text))?.sector;
+}
+
 function toArticle(input: {
   title: string;
   url: string;
@@ -30,6 +49,7 @@ function toArticle(input: {
   publishedAt?: string | null;
 }): Article {
   const safeSummary = input.summary?.trim() ? input.summary.trim().slice(0, 400) : "No summary available.";
+  const haystack = `${input.title} ${safeSummary}`;
   return {
     id: hashId(input.url),
     title: input.title.trim(),
@@ -38,7 +58,9 @@ function toArticle(input: {
     sourceName: input.sourceName || "Unknown source",
     publishedAt: input.publishedAt ? new Date(input.publishedAt).toISOString() : new Date().toISOString(),
     fetchedAt: new Date().toISOString(),
-    tags: tagArticle(`${input.title} ${safeSummary}`),
+    tags: tagArticle(haystack),
+    firms: matchFirms(haystack),
+    sector: inferSector(haystack),
   };
 }
 
