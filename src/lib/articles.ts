@@ -1,8 +1,10 @@
 import fs from "fs";
 import path from "path";
+import { head } from "@vercel/blob";
 import type { Article } from "@/types/article";
 
 const DATA_PATH = path.join(process.cwd(), "data", "news-data.json");
+const BLOB_PATHNAME = "news-data.json";
 
 function readLocalFile(): Article[] {
   if (!fs.existsSync(DATA_PATH)) return [];
@@ -13,20 +15,21 @@ function readLocalFile(): Article[] {
   }
 }
 
-async function readFromBlob(baseUrl: string): Promise<Article[]> {
+async function readFromBlob(): Promise<Article[] | null> {
   try {
-    const res = await fetch(`${baseUrl}/news-data.json`, { cache: "no-store" });
-    if (!res.ok) return [];
+    const meta = await head(BLOB_PATHNAME);
+    const res = await fetch(meta.url, { cache: "no-store" });
+    if (!res.ok) return null;
     return (await res.json()) as Article[];
   } catch {
-    return [];
+    return null;
   }
 }
 
 export async function getArticles(): Promise<Article[]> {
-  const blobBaseUrl = process.env.BLOB_PUBLIC_BASE_URL;
-  if (blobBaseUrl) {
-    return readFromBlob(blobBaseUrl);
+  if (process.env.BLOB_READ_WRITE_TOKEN) {
+    const blobArticles = await readFromBlob();
+    if (blobArticles) return blobArticles;
   }
   return readLocalFile();
 }
